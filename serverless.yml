@@ -1,0 +1,26 @@
+# serverless.yml
+
+service: my-express-application
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+
+custom:
+  tableName: 'contacts-table-${self:provider.stage}'
+  dynamodb:
+    start:
+      migrate: true
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

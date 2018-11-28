@@ -1,0 +1,24 @@
+{
+  "name": "serverless-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.363.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "joi": "^14.3.0",
+    "serverless-http": "^1.8.0",
+    "serverless-offline": "^3.31.3",
+    "vogels": "^2.2.0"
+  },
+  "devDependencies": {
+    "serverless-dynamodb-local": "^0.2.35"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
